@@ -123,8 +123,10 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col items-center p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-5xl mx-auto space-y-12">
-        <div className="flex gap-4 items-center">
-          <img src={Logo} height={120} width={70}/>
+        <div >
+
+          <div className="flex gap-4 items-center">
+            <img src={Logo} height={120} width={70}/>
           <header className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">
               ITPL-LV-WIRING TABLE
@@ -133,6 +135,7 @@ const App: React.FC = () => {
               Paste your wiring diagram screenshots (Ctrl+V) and extract terminal data using Tesseract OCR.
             </p>
           </header>
+          </div>
 
           <main className="bg-gray-800/50 rounded-2xl shadow-2xl p-6 sm:p-8 backdrop-blur-sm border border-gray-700">
             <div className="mb-8 p-4 bg-gray-900/50 rounded-xl border border-gray-700/50">
