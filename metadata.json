@@ -1,0 +1,5 @@
+{
+  "name": "ITPL-WIRING TABLE",
+  "description": "Extract terminal data from wiring diagram screenshots using Tesseract OCR. Supports Standard, Advanced, and Reversed terminal formats.",
+  "requestFramePermissions": []
+}
