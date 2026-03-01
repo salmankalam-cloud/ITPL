@@ -124,7 +124,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col items-center p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-5xl mx-auto space-y-12">
         <div className="flex gap-4 items-center">
-          <img src={Logo} height={120} width={70}>
+          <img src={Logo} height={120} width={70}/>
           <header className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">
               ITPL-LV-WIRING TABLE
