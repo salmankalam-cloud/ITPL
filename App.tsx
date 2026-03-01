@@ -125,7 +125,7 @@ const App: React.FC = () => {
         <div>
           <header className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">
-              ITPL-WIRING TABLE
+              ITPL-LV-WIRING TABLE
             </h1>
             <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
               Paste your wiring diagram screenshots (Ctrl+V) and extract terminal data using Tesseract OCR.
