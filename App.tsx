@@ -113,7 +113,7 @@ const App: React.FC = () => {
       <div className="w-full max-w-5xl mx-auto space-y-12">
         <div>
           <header className="text-center mb-8">
-            <img src={Logo} height={100}  />
+            <img src={Logo} height={100}  className="mt-2 mb-2"/>
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
               Image to Excel Extractor
             </h1>
