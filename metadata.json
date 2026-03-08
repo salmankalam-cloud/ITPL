@@ -1,0 +1,5 @@
+{
+  "name": "Image to Excel Extractor",
+  "description": "An application to extract tabular data from images and convert it into a downloadable CSV format using AI. Upload an image containing a table or connection data, and the app will generate a structured CSV file.",
+  "requestFramePermissions": []
+}
