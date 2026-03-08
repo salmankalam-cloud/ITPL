@@ -112,7 +112,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col items-center p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-5xl mx-auto space-y-12">
         <div>
-          <header className="text-center mb-8">
+          <header className="text-center mb-8 flex flex-col gap-2">
             <img src={Logo} className="mt-2 mb-2 h-[100px]"/>
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
               Image to Excel Extractor
