@@ -6,6 +6,7 @@ import { extractDataFromImage } from "./services/geminiService";
 import { fileToBase64 } from "./utils/fileUtils";
 import HistoryLog from "./components/HistoryLog";
 import Logo from "./assets/logo.jpeg";
+import { createWorker } from "tesseract.js";
 
 export interface HistoryEntry {
   id: string;
@@ -67,14 +68,19 @@ const App: React.FC = () => {
       const base64Image = await fileToBase64(imageData.file);
       const mimeType = imageData.file.type;
 
-      const result = await extractDataFromImage(base64Image, mimeType);
-      setExtractedCsv(result);
+      const worker = await createWorker("eng");
+      const ret = await worker.recognize(imageData.file);
+      const text = ret.data.text;
+      await worker.terminate();
+
+      // const result = await extractDataFromImage(base64Image, mimeType);
+      // setExtractedCsv(result);
 
       const dataUrl = `data:${mimeType};base64,${base64Image}`;
       const newEntry: HistoryEntry = {
         id: crypto.randomUUID(),
         imageUrl: dataUrl,
-        csvData: result,
+        csvData: text,
         timestamp: Date.now(),
       };
       setHistory((prevHistory) => [newEntry, ...prevHistory]);
@@ -113,7 +119,7 @@ const App: React.FC = () => {
       <div className="w-full max-w-5xl mx-auto space-y-12">
         <div>
           <header className="text-center mb-8 flex flex-col gap-2 items-center">
-            <img src={Logo} className="mt-2 mb-2 h-[100px]"/>
+            <img src={Logo} className="mt-2 mb-2 h-[100px]" />
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
               Image to Excel Extractor
             </h1>
